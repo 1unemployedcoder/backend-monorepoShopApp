@@ -57,25 +57,33 @@ Before running the backend, ensure you have the following installed:
 
 ## API Endpoints
 
+## API Endpoints
+
+### News Endpoints:
+
 - **GET /api/news**: Retrieve all news articles.
 - **GET /api/news/:id**: Retrieve a specific news article by ID.
 - **POST /api/news**: Create a new news article. (Requires ADMIN role)
 - **DELETE /api/news/:id**: Delete a news article by ID. (Requires ADMIN role)
+- **POST /api/newsComments/:id**: Add a comment to a news article. (Requires authentication)
+- **DELETE /api/newsComments/:id**: Delete a comment from a news article. (Requires authorization)
+
+### Products Endpoints:
 
 - **GET /api/products**: Retrieve all products.
 - **GET /api/products/:id**: Retrieve a specific product by ID.
 - **POST /api/products**: Create a new product. (Requires ADMIN role)
 - **DELETE /api/products/:id**: Delete a product by ID. (Requires ADMIN role)
+- **POST /api/productComments/:id**: Add a comment to a product. (Requires authentication)
+- **DELETE /api/productComments/:id**: Delete a comment from a product. (Requires authorization)
+
+### Product Type Endpoints:
 
 - **GET /api/type**: Retrieve all product types.
 - **POST /api/type**: Create a new product type. (Requires ADMIN role)
 
-- **GET /api/user/auth**: Check user authentication status.
+### User Endpoints:
+
 - **POST /api/user/login**: Log in a user.
 - **POST /api/user/registration**: Register a new user.
-
-- **POST /api/newsComments/:id**: Add a comment to a news article. (Requires authentication)
-- **DELETE /api/newsComments/:id**: Delete a comment from a news article. (Requires authorization)
-
-- **POST /api/productComments/:id**: Add a comment to a product. (Requires authentication)
-- **DELETE /api/productComments/:id**: Delete a comment from a product. (Requires authorization)
+- **GET /api/user/auth**: Check user authentication status.
